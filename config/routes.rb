@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'photos#index'
+
   resources :users, only: [:create]
   get 'create_account', to: 'users#new', as: :create_account
 
