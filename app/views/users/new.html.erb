@@ -1,17 +1,17 @@
 <h1>Join Finsta!</h1>
 
-<%= form_for @user do |f| %>
+<%= form_with(model: @user, local: true) do |form| %>
   <div class="field">
-    <%= f.label :username %>
-    <%= f.text_field :username, required: true %>
+    <%= form.label :username %>
+    <%= form.text_field :username, required: true %>
   </div>
   <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password, required: true %>
+    <%= form.label :password %>
+    <%= form.password_field :password, required: true %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, required: true %>
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, required: true %>
   </div>
-  <%= f.submit 'Create Account', class: 'btn btn-primary btn-lg' %>
+  <%= form.submit 'Create Account' %>
 <% end %>
