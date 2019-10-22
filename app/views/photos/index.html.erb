@@ -1,2 +1,6 @@
 <h1>Wow!</h1>
 <p>You're an artist!</p>
+
+<% @photos.each do |photo| -%>
+  <%= image_tag photo.image %>
+<% end %>

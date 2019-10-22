@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get 'sign_in', to: 'user_sessions#new', as: :sign_in
   post 'sign_out', to: 'user_sessions#destroy', as: :sign_out
 
-  resources :photos, only: [:index]
+  resources :photos, only: [:index, :create]
+  get 'post_photo', to: 'photos#new', as: :post_photo
 end

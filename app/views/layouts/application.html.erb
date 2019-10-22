@@ -12,6 +12,7 @@
   <body>
     <div id="nav">
       <% if current_user %>
+        <%= link_to "Post a Photo", :post_photo %>
         <%= link_to "Logout", :sign_out, method: :post %>
       <% else %>
         <%= link_to "Create account", :create_account %> |
